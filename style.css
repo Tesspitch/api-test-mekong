@@ -2009,3 +2009,124 @@ body {
     opacity: 1;
   }
 }
+
+/* ===================================================
+   Responsive Design (Mobile & Tablet)
+   =================================================== */
+
+/* Tablet (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .hud-metrics {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .blog-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .filter-controls {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .news-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-desc {
+    font-size: 1rem;
+    padding: 0 16px;
+  }
+
+  .hud-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .hud-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .param-select-group {
+    width: 100%;
+  }
+  
+  #fetchApiBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .quick-presets {
+    flex-wrap: wrap;
+  }
+  
+  .year-pills {
+    flex-wrap: wrap;
+  }
+  
+  .modal-container {
+    padding: 16px;
+    margin: 16px;
+  }
+  
+  .article-page-header {
+    padding: 12px;
+  }
+  
+  .article-title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  .article-cover {
+    height: 240px;
+  }
+  
+  .article-meta {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hud-panel {
+    padding: 16px;
+  }
+  
+  .news-card .card-content {
+    padding: 16px;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+}
