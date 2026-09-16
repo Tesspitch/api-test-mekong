@@ -39,8 +39,8 @@ const server = http.createServer((req, res) => {
   // Intercept config.js to serve dynamically from .env
   if (reqPath === '/config.js') {
     const configContent = `const CONFIG = {
-  API_BASE_URL: '${process.env.API_BASE_URL || 'https://www.comnetmekong.org/_functions'}',
-  WEB_BASE_URL: '${process.env.WEB_BASE_URL || 'https://www.comnetmekong.org'}',
+  API_BASE_URL: '${process.env.API_BASE_URL}',
+  WEB_BASE_URL: '${process.env.WEB_BASE_URL}',
 };`;
     res.writeHead(200, {
       'Content-Type': 'application/javascript; charset=UTF-8',
@@ -82,3 +82,7 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}/`);
 });
+
+
+// เพิ่มบรรทัดนี้ไว้ท้ายไฟล์ server.js
+module.exports = app;
