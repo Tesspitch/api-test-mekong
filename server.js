@@ -79,10 +79,13 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
-});
-
+if (!process.env.VERCEL) {
+  server.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}/`);
+  });
+}
 
 // เพิ่มบรรทัดนี้ไว้ท้ายไฟล์ server.js
-module.exports = app;
+module.exports = (req, res) => {
+  server.emit('request', req, res);
+};
